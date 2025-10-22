@@ -11,8 +11,27 @@
 </head>
 
 <body>
-<h1>This title is from the template</h1>
-<div class="container">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+    <a href="/logout">Logout</a>
+  </div>
+</nav>
+
+<div class="container-fluid">
+
     @yield('section1')
 </div>
 </body>
