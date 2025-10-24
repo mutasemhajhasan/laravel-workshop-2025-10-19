@@ -16,17 +16,21 @@
    <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Posts</a>
+          <a class="nav-link" href="/posts">Posts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="/about">About</a>
         </li>
       </ul>
     </div>
+    @if (Auth::user())
     <a href="/logout">Logout</a>
+    @else
+    <a href="/login">Login</a>
+    @endif
   </div>
 </nav>
 

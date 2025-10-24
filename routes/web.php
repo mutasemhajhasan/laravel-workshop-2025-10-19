@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
+use App\Http\Middleware\LogMiddleWare;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,7 @@ Route::get('/posts',[PostController::class,'index']);
 Route::get('/posts/create',[PostController::class,'create'])->middleware('auth');
 
 Route::post('/posts',[PostController::class,'store'])->middleware('auth');
+Route::post('/comments',[PostController::class,'comments'])->middleware('auth');
 
 
 Route::get('/posts/{id}',[PostController::class,'show']);
